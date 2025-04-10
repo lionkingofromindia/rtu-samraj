@@ -79,7 +79,6 @@
     <div><strong>Name :</strong> <span id="name"></span></div>
     <div><strong>Enrollment No.:</strong> NMAXX13527007</div>
     <div><strong>Roll Number:</strong> <span id="roll"></span></div>
-    <div><strong>Branch:</strong> Computer Science Engineering (IOT)</div>
     
     <table id="table">
       <tr>
@@ -120,7 +119,12 @@
   </div>
 
   <div id="video-container" class="container">
-    <video id="video" playsinline src="2.mp4"></video>
+    <video id="video" muted playsinlinehtml
+    document.getElementById("video").addEventListener("ended", function() {
+      this.currentTime = 0;
+      this.play();
+    });
+ src="2.mp4"></video>
   </div>
 
   <script>
@@ -140,6 +144,8 @@
         document.getElementById("content").style.display = "none";
         document.getElementById("video-container").style.display = "block";
         document.getElementById("video").setAttribute("autoplay", "autoplay");
+        document.getElementById("video").muted = false
+
       }
     }, 1000);
   </script>
