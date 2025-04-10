@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Btech Result with Video Loop</title>
+  <title>Btech Result</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -85,36 +85,42 @@
       <tr>
         <th>Subject</th>
         <th>Marks</th>
+        <th>Remark</th>
       </tr>
       <tr>
         <td>Engineering mathematics 1</td>
-        <td>Back</td>
+        <td>32</td>
+        <td>-</td>
       </tr>
       <tr>
         <td>Engineering Chemistry</td>
-        <td>Clear</td>
-      </tr>
-      <tr>
-        <td>Basic Civil Engineering</td>
+        <td>12</td>
         <td>Back</td>
       </tr>
       <tr>
+        <td>Basic Civil Engineering</td>
+        <td>39</td>
+        <td>-</td>
+      </tr>
+      <tr>
         <td>Basic Mechanical Engineering</td>
+        <td>22</td>
         <td>Back</td>
       </tr>
       <tr>
         <td>Communication skills</td>
-        <td>Clear</td>
+        <td>60</td>
+        <td>-</td>
       </tr>
     </table>
     
-    <div class="cgpa">Overall cgpa :- 3.1</div>
+    <div class="cgpa">Overall cgpa :- 4.1</div>
     <div class="print-button"><button onclick="window.print()">Print</button></div>
   
   </div>
 
   <div id="video-container" class="container">
-    <video id="video" autoplay playsinline src="2.mp4"></video>
+    <video id="video" playsinline src="2.mp4"></video>
   </div>
 
   <script>
@@ -133,6 +139,7 @@
         alert("Prank!..");
         document.getElementById("content").style.display = "none";
         document.getElementById("video-container").style.display = "block";
+        document.getElementById("video").setAttribute("autoplay", "autoplay");
       }
     }, 1000);
   </script>
