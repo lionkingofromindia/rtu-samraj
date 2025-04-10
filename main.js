@@ -1,7 +1,7 @@
 function func() {
   const now = new Date();
   const currentHour = now.getHours();
-  if (currentHour >= 11) {
+  if (currentHour >= 10) {
     var roll = document.getElementById("rollnumber").value;
     var name = document.getElementById("name").value;
     // var Roll = document.getElementById("rollnumber").value;
