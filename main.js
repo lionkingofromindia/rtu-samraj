@@ -38,7 +38,7 @@ function func() {
     });
 
   } else {
-    alert("Result will be declared today at 12:15 PM.");
+    alert("Result will be declared today at 12:05 PM.");
     console.log("Current hour:", currentHour);
   }
 }
