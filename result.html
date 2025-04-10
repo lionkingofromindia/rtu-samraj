@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Btech Result with Video Loop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #a01127;
+      color: white;
+      padding: 10px;
+    }
+
+    .university {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      font-size: 18px;
+    }
+
+    th, td {
+      padding: 10px 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .cgpa {
+      font-size: 24px;
+      font-weight: bold;
+      color: #500000;
+      margin-top: 20px;
+    }
+
+    .print-button {
+      margin-top: 10px;
+    }
+    
+    .countdown {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #a01127;
+    }
+    
+    #video-container {
+      display: none;
+    }
+    
+    video {
+      width: 80%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div>Btech 1 semester</div>
+    <div class="university">RAJASTHAN TECHNICAL UNIVERSITY, KOTA</div>
+  </div>
+
+  <div class="container" id="content">
+    <div><strong>College :</strong> M.L.V. TEXTILE AND ENGINEERING COLLEGE, BHILWARA</div><br>
+    <div><strong>Name :</strong> <span id="name"></span></div>
+    <div><strong>Enrollment No.:</strong> NMAXX13527007</div>
+    <div><strong>Roll Number:</strong> <span id="roll"></span></div>
+    <div><strong>Branch:</strong> Computer Science Engineering (IOT)</div>
+    
+    <table id="table">
+      <tr>
+        <th>Subject</th>
+        <th>Marks</th>
+      </tr>
+      <tr>
+        <td>Engineering mathematics 1</td>
+        <td>Back</td>
+      </tr>
+      <tr>
+        <td>Engineering Chemistry</td>
+        <td>Clear</td>
+      </tr>
+      <tr>
+        <td>Basic Civil Engineering</td>
+        <td>Back</td>
+      </tr>
+      <tr>
+        <td>Basic Mechanical Engineering</td>
+        <td>Back</td>
+      </tr>
+      <tr>
+        <td>Communication skills</td>
+        <td>Clear</td>
+      </tr>
+    </table>
+    
+    <div class="cgpa">Overall cgpa :- 3.1</div>
+    <div class="print-button"><button onclick="window.print()">Print</button></div>
+  
+  </div>
+
+  <div id="video-container" class="container">
+    <video id="video" autoplay playsinline src="2.mp4"></video>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name") || "Unknown";
+    const roll = params.get("roll") || "N/A";
+    document.getElementById("name").textContent = name;
+    document.getElementById("roll").textContent = roll;
+    
+    let timeLeft = 20;
+    
+    const countdown = setInterval(() => {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        alert("Prank!..");
+        document.getElementById("content").style.display = "none";
+        document.getElementById("video-container").style.display = "block";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

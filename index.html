@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rtu result</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <form>
+    <div class="head">
+      <img src="logo.png">
+      <div class="para">
+        <h2>Rajasthan Technical University<h2>
+            <h2>राजस्थान तकनीकी विश्वविद्यालय</h2>
+      </div>
+      
+      <div class="log">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        log in
+      </div>
+    </div>
+    <div class="body">
+      <div class="info">
+        <h5>
+          Session
+        </h5> <select name="session" id="session:" class="size">
+        <option value="-- Select Session--">--Session--</option>
+        <option value="2021-22">2021-22</option>
+        <option value="2022-23">2022-23</option>
+        <option value="2023-24">2023-24</option>
+        <option value="2024-25">2024-25</option>
+        </select>
+        <br>
+        <h5>
+          Exam Category:
+        </h5>
+        <select name="exam" id="exam" class="size">
+          <option value="--Select Exam Category--">--Select Exam Category--</option>
+          <option value="Odd Semester">Odd Semester</option>
+          <option value="Convocation">Convocation</option>
+          <option value="Odd Semester(Reval)">Odd Semester(Reval)</option>
+        </select>
+        <br>
+        <h5>Degree</h5>
+        <select name="degree" id="degree" class="size">
+          <option value="--Select Degree--">--Select Degree--</option>
+          <option value="B.tech">B.tech</option>
+          <option value="M.tech UD">M.tech UD</option>
+        </select>
+        <br>
+        <h5>Name of student:</h5>
+        <input type="text" placeholder="Enter Student's Name" required id="name">
+        <br>
+        <h5>Roll Number:</h5>
+        <input type="text" placeholder="Enter Roll Number In Capital.." required id="rollnumber">
+        <br>
+        <h5>Father name:</h5>
+        <input type="text" placeholder="Enter Father's Name" required>
+        <br>
+        <h5>Mother Name:</h5>
+        <input type="text" placeholder="Enter Mother's Name" required>
+      </div>
+      
+    </div>
+    <div class="note">
+      <b>
+        <p class="para"> Note: Please enter at least the first 4 characters of your mother's or father's name.</p>
+        
+        <p class="para">
+          Note: In case of "UN" - Result will be declared after University decision published.
+        </p>
+        
+        <p class="para">
+          Note: In case of "RW" - Result will be declared after deficiency is cleared.
+        </p>
+      </b>
+    </div>
+    <div class="btn">
+      <button class="log-btn" type="submit" onclick="func()"> Download </button>
+      <div class="reset"> Reset </div>
+    </div>
+    
+    
+    
+  </form>
+  <script src="main.js"></script>
+</body>
+
+</html>
